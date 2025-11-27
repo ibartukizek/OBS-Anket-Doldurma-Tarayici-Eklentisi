@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 300px; font-family: 'Segoe UI', Tahoma, sans-serif; padding: 15px; background-color: #f4f4f4; }
+    h3 { margin-top: 0; color: #333; text-align: center; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+    
+    .status-box { padding: 10px; margin-bottom: 15px; border-radius: 5px; text-align: center; font-weight: bold; font-size: 14px; }
+    .status-wait { background-color: #ffe0b2; color: #e65100; }
+    .status-ok { background-color: #c8e6c9; color: #2e7d32; }
+    .status-err { background-color: #ffcdd2; color: #c62828; }
+
+    .controls { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    
+    .radio-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 15px; }
+    .radio-label { font-size: 13px; color: #555; display: flex; align-items: center; cursor: pointer; }
+    .radio-label input { margin-right: 8px; }
+
+    button { width: 100%; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.2s; }
+    #checkBtn { background-color: #607d8b; color: white; margin-bottom: 10px; }
+    #checkBtn:hover { background-color: #455a64; }
+    
+    #fillBtn { background-color: #2196F3; color: white; }
+    #fillBtn:hover { background-color: #1976D2; }
+    #fillBtn:disabled { background-color: #bdbdbd; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+
+  <h3>OBS Anket Aracı</h3>
+
+  <div id="status" class="status-box status-wait">Checking...</div>
+
+  <button id="checkBtn">Tekrar Kontrol Et</button>
+
+  <div class="controls">
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="mode" value="0"> 1 - Hiç Önemsemiyorum</label>
+      <label class="radio-label"><input type="radio" name="mode" value="1"> 2 - Önemsemiyorum</label>
+      <label class="radio-label"><input type="radio" name="mode" value="2" checked> 3 - Kararsızım</label>
+      <label class="radio-label"><input type="radio" name="mode" value="3"> 4 - Önemsiyorum</label>
+      <label class="radio-label"><input type="radio" name="mode" value="4"> 5 - Çok Önemsiyorum</label>
+      <hr style="width:100%; border:0; border-top:1px solid #eee;">
+      <label class="radio-label"><input type="radio" name="mode" value="random"> 🎲 Rastgele Doldur</label>
+    </div>
+
+    <button id="fillBtn" disabled>ANKETİ DOLDUR</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

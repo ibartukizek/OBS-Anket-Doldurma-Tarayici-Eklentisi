@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "OBS Anket Doldurucu",
+  "version": "0.2",
+  "description": "Otomatik olarak OBS anketlerini doldurur.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "OBS Anket Doldurucu"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.edu.tr/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
