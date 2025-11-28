@@ -1,4 +1,6 @@
-OBS Otomatik Anket Doldurma Eklentisi
+**OBS Otomatik Anket Doldurma Eklentisi**
+
+![](demo_obs_2.gif)
 
 Üniversite OBS sistemlerindeki zorunlu ders değerlendirme anketlerini tek tıkla doldurmanızı sağlayan tarayıcı eklentisidir.
 
